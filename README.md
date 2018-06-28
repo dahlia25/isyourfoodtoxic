@@ -16,7 +16,7 @@ A foodborne disease outbreak occurs when two or more people become ill from the 
 ## About the Dataset
 The dataset is obtained from the Centers for Disease Control and Prevention (CDC) and provided on Kaggle. 
 
-[Click here for Outbreaks.csv](https://www.kaggle.com/cdc/foodborne-diseases)
+[Click here for outbreaks.csv](https://www.kaggle.com/cdc/foodborne-diseases)
 
 ## The Problem
 Based on historical data, can we predict whether certain features caused hospitalizations?
