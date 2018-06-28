@@ -2,6 +2,8 @@
 This is a Capstone Project for Springboard's Intermerdiate Data Science course. 
 The **isyourfoodtoxic** repo will contain all code and work done for the project.
 
+All coding is completed in Python3 on Jupyter Notebook in Anaconda.
+
 ---
 
 Below is a milestone on what will be covered in this project.
