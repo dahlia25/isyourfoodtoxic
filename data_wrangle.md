@@ -15,6 +15,8 @@ Here are the steps I took and codes for data cleaning and transforming.
 `outbreaks = pd.read_csv("~outbreaks.csv")`  
 `df = outbreaks.dropna().reset_index()`  
 
+---
+
 ### c. Unstack all multiple cell entries into individual rows for each feature/column
 
 > Separate multiple entries in 'Species' column cell into rows
@@ -92,21 +94,29 @@ Here are the steps I took and codes for data cleaning and transforming.
 `result0['Location'] = result0['Location'].str.lstrip(' ')`  
 `result0['State'] = result0['State'].str.lstrip(' ')`  
 
+---
+
 > Convert all *Month* names into numbers, using dictionary
 
 `month_dict = {'January':'01','February':'02','March':'03','April':'04','May':'05','June':'06','July':'07','August':'08','September':'09','October':'10','November':'11','December':'12',}`  
 `result['Month'] = result['Month'].apply(lambda x: month_dict[x])`  
+
+---
 
 > Change Status to binary numbers: Confirmed (1) and Suspected (0)
 
 `status_dict = {'Confirmed':'1', 'Suspected':'0'}`  
 `result['Status'] = result['Status'].apply(lambda x: status_dict[x])`  
 
+---
+
 > Change all values in Illnesses, Hospitalizations & Fatalities to 1 or 0 (yes or no)
 
 `result0.loc[result0.Illnesses > 0, 'Illnesses'] = 1`  
 `result0.loc[result0.Hospitalizations > 0, 'Hospitalizations'] = 1`  
 `result0.loc[result0.Fatalities > 0, 'Fatalities'] = 1`  
+
+---
 
 > Transform all cateogrical data to One Hot Encoding (OHE)
 
