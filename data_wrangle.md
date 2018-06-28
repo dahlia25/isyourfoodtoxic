@@ -147,4 +147,4 @@ Here are the steps I took and codes for data cleaning and transforming.
 `combine.insert(loc=4, column='Illnesses', value=result0['Illnesses'])`  
 `combine.insert(loc=5, column='Hospitalizations', value=result0['Hospitalizations'])`  
 `combine.insert(loc=6, column='Fatalities', value=result0['Fatalities'])`  
-**I can manipulate feature vs. label (i.e. Hospitalizations) any time be coming back to this section.
+**I can manipulate feature vs. label (i.e. Hospitalizations) any time be coming back to this section.**
