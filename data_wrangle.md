@@ -82,3 +82,59 @@ Here are the steps I took and codes for data cleaning and transforming.
 `good_df['Status'].str.replace(' ', '')`  
 
 `good_df.drop_duplicates(subset=['Year','Month','State','Location','Food','Ingredient','Species','Serotype/Genotype','Illnesses'], inplace=True)`  
+
+> Remove all leading white spaces in cell entries for all Dataframe columns
+
+`result0 = result.drop_duplicates(subset=['Year','Month','State','Location','Ingredient','Species','Serotype/Genotype','Illnesses'])`  
+`result0['Ingredient'] = result0['Ingredient'].str.lstrip(' ')`  
+`result0['Species'] = result0['Species'].str.lstrip(' ')`  
+`result0['Serotype/Genotype'] = result0['Serotype/Genotype'].str.lstrip(' ')`  
+`result0['Location'] = result0['Location'].str.lstrip(' ')`  
+`result0['State'] = result0['State'].str.lstrip(' ')`  
+
+> Convert all *Month* names into numbers, using dictionary
+
+`month_dict = {'January':'01','February':'02','March':'03','April':'04','May':'05','June':'06','July':'07','August':'08','September':'09','October':'10','November':'11','December':'12',}`  
+`result['Month'] = result['Month'].apply(lambda x: month_dict[x])`  
+
+> Change Status to binary numbers: Confirmed (1) and Suspected (0)
+
+`status_dict = {'Confirmed':'1', 'Suspected':'0'}`  
+`result['Status'] = result['Status'].apply(lambda x: status_dict[x])`  
+
+> Change all values in Illnesses, Hospitalizations & Fatalities to 1 or 0 (yes or no)
+
+`result0.loc[result0.Illnesses > 0, 'Illnesses'] = 1`  
+`result0.loc[result0.Hospitalizations > 0, 'Hospitalizations'] = 1`  
+`result0.loc[result0.Fatalities > 0, 'Fatalities'] = 1`  
+
+> Transform all cateogrical data to One Hot Encoding (OHE)
+
+`del result0['Food'] #do not neet this feature since we have Ingredient`  
+
+`month = result0['Month']`  
+`states = result0['State']`  
+`location = result0['Location']`  
+`ingt = result0['Ingredient']`  
+`ssp = result0['Species']`  
+`sgt = result0['Serotype/Genotype']`  
+
+`result0_month = pd.get_dummies(month)`  
+`result0_states = pd.get_dummies(states)`  
+`result0_location = pd.get_dummies(location)`  
+`result0_ingt = pd.get_dummies(ingt)`  
+`result0_ssp = pd.get_dummies(ssp)`  
+`result0_sgt = pd.get_dummies(sgt)`  
+
+`combine = pd.concat([result0_states, result0_location, result0_ingt, result0_ssp, result0_sgt], axis=1)`  
+`combine = pd.concat([result0_location, result0_ingt, result0_ssp, result0_sgt], axis=1)` 
+`combine = result0_location`  
+
+`combine.insert(loc=0, column='Year', value=result0['Year'])`  
+`combine.insert(loc=1, column='Month', value=result0['Month'])`  
+`combine.insert(loc=2, column='Population', value=result0['Population'])`  
+`combine.insert(loc=3, column='Status', value=result0['Status'])`  
+`combine.insert(loc=4, column='Illnesses', value=result0['Illnesses'])`  
+`combine.insert(loc=5, column='Hospitalizations', value=result0['Hospitalizations'])`  
+`combine.insert(loc=6, column='Fatalities', value=result0['Fatalities'])`  
+**I can manipulate feature vs. label (i.e. Hospitalizations) any time be coming back to this section.
