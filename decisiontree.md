@@ -41,3 +41,7 @@ We visualize Decision Trees improve feature engineering and increase accuracy of
 `dot_data = tree.export_graphviz(dt_clf, out_file = None)`  
 `graph = graphviz.Source(dot_data)`  
 `graph`  
+
+Output:  
+
+![](https://raw.githubusercontent.com/dahlia25/isyourfoodtoxic/master/location.RFcw.png)
