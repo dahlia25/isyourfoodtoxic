@@ -1,0 +1,117 @@
+,,,
+RandomForest Classifier Important Features,,,
+"Hospitalizations
+without class_weight",,"Hospitalizations
+with class_weight",
+Ingredients,Importance,Ingredients,Importance
+Oysters,0.15,Fin Fish,0.11
+"Oysters, Raw",0.12,Root (Eg. Potato),0.1
+Pork,0.1,Guinea Pig,0.08
+Wraps/Tortillas,0.1,Oysters,0.07
+Chicken,0.09,"Oysters, Raw",0.07
+Fin Fish,0.08,Tomato,0.07
+Eggplant,0.06,Potato,0.06
+Corn,0.05,Chicken,0.05
+Potato,0.05,Pork,0.05
+Root (Eg. Potato),0.05,Cheese,0.04
+Chick Peas,0.03,Corn,0.04
+Guinea Pig,0.03,Chick Peas,0.03
+Rice,0.02,"Bread, Wheat",0.02
+Spices,0.02,Pasta,0.02
+Sprouts,0.02,Rice,0.02
+"Milk, Whole Milk",0.01,Salmon Heads,0.02
+Venison,0.01,Tuna,0.02
+,,Banana,0.01
+,,Cabbage,0.01
+,,Chili Sauce,0.01
+,,Iceberg Lettuce,0.01
+,,Leaf Lettuce,0.01
+,,Leafy Green,0.01
+,,Mesclun Mix,0.01
+,,"Milk, Unpasteurized",0.01
+,,Mushrooms,0.01
+,,Sauces/ Dressings,0.01
+,,Spinach,0.01
+,,Steak,0.01
+,,Watermelon,0.01
+,,Wraps/Tortillas,0.01
+,,,
+Species,,Species,
+Norovirus genogroup I,0.28,Norovirus genogroup II,0.27
+"Escherichia coli, Shiga toxin-producing",0.14,Norovirus genogroup I,0.21
+Norovirus genogroup II,0.14,"Escherichia coli, Shiga toxin-producing",0.19
+Clostridium perfringens,0.13,Salmonella enterica,0.19
+Salmonella enterica,0.09,Clostridium perfringens,0.05
+Campylobacter jejuni,0.01,Norovirus unknown,0.03
+Shigella,0.01,Shigella,0.02
+,,Campylobacter jejuni,0.01
+,,"Escherichia coli, Enteroaggregative",0.01
+,,,
+Sero- Geno-type,,Sero- Geno-type,
+Unknown,0.27,Unknown,0.25
+London,0.15,Oranienburg,0.09
+Javiana,0.08,Uganda,0.09
+GI_2,0.06,London,0.08
+Infantis,0.06,Newport,0.07
+Uganda,0.06,Chailey,0.06
+Variable:,0.04,Variable:,0.05
+Anatum,0.04,Javiana,0.05
+Chailey,0.04,Heidelberg,0.04
+Oranienburg,0.04,"I 4,[5],12:i:-",0.04
+Derby,0.03,Anatum,0.03
+"I 4,[5],12:i:-",0.03,GII_12,0.03
+Newport,0.03,Typhimurium var Cope,0.03
+Typhimurium,0.03,Enteritidis,0.02
+Enteritidis,0.01,O157:H7,0.02
+Hartford,0.01,O157:NM (H-),0.02
+Lomalinda,0.01,Blockley,0.01
+Other,0.01,GI_2,0.01
+,,GI_7,0.01
+,,Hartford,0.01
+,,Lomalinda,0.01
+,,Other,0.01
+,,Typhimurium,0.01
+,,,
+Month,,Month,
+8,0.77,8,0.5
+10,0.23,11,0.23
+,,10,0.17
+,,7,0.03
+,,2,0.02
+,,3,0.02
+,,6,0.02
+,,,
+Location,,Location,
+Fair/Festival,0.35,Fair/Festival,0.4
+Camp,0.12,Restaurant,0.2
+Banquet Facility,0.11,Banquet Facility,0.1
+Grocery Store,0.09,Catering Service,0.1
+Private Home/Residence,0.09,Grocery Store,0.1
+Restaurant,0.09,School/College/University,0.1
+Religious Facility,0.06,,
+Nursing Home/Assisted Living Facility,0.03,,
+Catering Service,0.02,,
+School/College/University,0.02,,
+Prison/Jail,0.01,,
+Unknown,0.01,,
+,,,
+State,,State,
+Minnesota,0.29,Massachusetts,0.16
+Massachusetts,0.16,Colorado,0.1
+Utah,0.15,Arkansas,0.08
+Hawaii,0.11,Utah,0.08
+New York,0.07,Georgia,0.06
+Arkansas,0.06,Hawaii,0.06
+Oregon,0.04,Rhode Island,0.06
+Arizona,0.02,South Carolina,0.06
+California,0.02,Connecticut,0.04
+Florida,0.02,Florida,0.04
+Georgia,0.02,Michigan,0.04
+North Dakota,0.02,Ohio,0.04
+North Carolina,0.01,Pennsylvania,0.04
+,,Tennessee,0.04
+,,Minnesota,0.02
+,,Missouri,0.02
+,,Nebraska,0.02
+,,North Carolina,0.02
+,,North Dakota,0.02
