@@ -8,6 +8,7 @@ One of the pros of SVM SVC is that it can process data with high dimensionality.
 `from sklearn import svm, tree`  
 `from sklearn.grid_search import GridSearchCV`  
 `from sklearn.cross_validation import train_test_split`  
+`import pprint as pp`  
 
 > Set up features & labels  
 
@@ -79,4 +80,4 @@ Take a look at the sample sizes for training and test data:
 
 `cvresults = sorted(GSclf.cv_results_.keys())`  
 `bestparams = GSclf.best_params_`  
-`print(bestparams)`  
+`pp.pprint(bestparams)`  
