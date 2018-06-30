@@ -1,3 +1,9 @@
+### To view the list of important features that affected my RF model.  
+
+**Save the followig as a CSV file and open in Excel or Python and etc.**
+
+---
+
 ,,,
 RandomForest Classifier Important Features,,,
 "Hospitalizations
